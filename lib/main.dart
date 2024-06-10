@@ -1,6 +1,8 @@
 // import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:tap/animation/animation_class.dart';
+import 'package:tap/animation/bouncing_ball.dart';
+import 'package:tap/animation/rotate.dart';
 
 // import 'package:tap/infinite_list_app/simple_bloc_observer.dart';
 
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       // home: MultiBlocProvider(
       //   providers: [
       //     BlocProvider<CounterBloc>(
@@ -60,7 +62,7 @@ class MyApp extends StatelessWidget {
       //     child: const UserDetailUi(),
       //   ),
       // ),
-      home: AnimationClass(),
+      home: BouncingBall(),
       debugShowCheckedModeBanner: false,
     );
   }
