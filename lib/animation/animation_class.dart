@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class AnimationClass extends StatefulWidget {
@@ -17,7 +14,6 @@ class _AnimationClassState extends State<AnimationClass>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      animationBehavior: AnimationBehavior.normal,
       duration: const Duration(
           milliseconds: 100), // Duration for one complete rotation
       vsync: this,

@@ -1,15 +1,6 @@
 // import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tap/animation/animation_class.dart';
-import 'package:tap/counter2_app/bloc/counter_bloc.dart';
-import 'package:tap/counter2_app/view/counterPage.dart';
-import 'package:tap/counter2_app/visibility_bloc/visibility_bloc.dart';
-import 'package:tap/data/bloc/user_bloc.dart';
-import 'package:tap/data/provider/user_provider.dart';
-import 'package:tap/data/repository/user_repository.dart';
-import 'package:tap/data/view/userUi.dart';
-import 'package:tap/pokemon/model/time.dart';
 
 // import 'package:tap/infinite_list_app/simple_bloc_observer.dart';
 

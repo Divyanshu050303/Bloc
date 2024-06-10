@@ -12,7 +12,6 @@ class Counter2page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CounterBloc counterBloc = CounterBloc();
     return Scaffold(
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
