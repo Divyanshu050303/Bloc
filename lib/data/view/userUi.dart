@@ -24,7 +24,7 @@ class UserDetailUi extends StatelessWidget {
           }
           if (state is UserErrorState) {
             return Center(
-              child: Text("Something went worng ${state.error}"),
+              child: Text("Something went worng  ${state.error}"),
             );
           }
           if (state is UserSuccessState) {
