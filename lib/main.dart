@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:tap/animation/animaterCard.dart';
 // import 'package:tap/animation/animation_class.dart';
 import 'package:tap/animation/bouncing_ball.dart';
+import 'package:tap/animation/chainAnimation.dart';
 import 'package:tap/animation/fadedEffect.dart';
+import 'package:tap/animation/heart.dart';
 import 'package:tap/animation/heartBeat.dart';
+import 'package:tap/animation/heartBreak.dart';
 import 'package:tap/animation/rotateImage.dart';
 import 'package:tap/animation/walkingContainer.dart';
 // import 'package:tap/animation/rotate.dart';
@@ -67,7 +70,7 @@ class MyApp extends StatelessWidget {
       //     child: const UserDetailUi(),
       //   ),
       // ),
-      home: FadedEffect(),
+      home: AnimatedHeart(),
       debugShowCheckedModeBanner: false,
     );
   }
