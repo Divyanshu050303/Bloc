@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tap/video_payer_using_cubit/cubit/video_player_cubit.dart';
-import 'package:tap/video_player/bloc/video_bloc.dart';
-import 'package:tap/video_player/bloc/video_event.dart';
-import 'package:tap/video_player/bloc/video_state.dart';
+// import 'package:tap/video_player/bloc/video_bloc.dart';
+// import 'package:tap/video_player/bloc/video_event.dart';
+// import 'package:tap/video_player/bloc/video_state.dart';
 import 'package:tap/video_player/model/video_model.dart';
 import 'package:tap/video_player/views/buildThumbNail.dart';
 import 'package:tap/video_player/views/paly_video.dart';
