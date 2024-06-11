@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tap/timer_app/ticker.dart';
 
 class HeartAfterClick extends StatefulWidget {
   const HeartAfterClick({super.key});
@@ -12,12 +11,12 @@ class _HeartAfterClickState extends State<HeartAfterClick>
     with TickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
-  late AnimationController _heartBreakController;
   late Animation<double> heartBrokeAnimation;
   late Animation<double> fellDownAnimation;
   bool color = false;
   @override
   void initState() {
+    super.initState();
     // TODO: implement initState
 
     _controller =
@@ -25,7 +24,6 @@ class _HeartAfterClickState extends State<HeartAfterClick>
           ..repeat(reverse: true);
     _animation = Tween<double>(begin: 140, end: 160)
         .animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
-    _heartBreakController = AnimationController(vsync: this);
   }
 
   @override
