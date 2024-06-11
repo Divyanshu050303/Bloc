@@ -18,7 +18,7 @@ class VideoPalyer extends StatelessWidget {
           context.read<VideoBloc>().add(LoadingVideoevent());
         },
         tooltip: "fetch Video",
-        child: Icon(Icons.download),
+        child: const Icon(Icons.download),
       ),
       body: BlocBuilder<VideoBloc, VideoState>(
         builder: (context, state) {

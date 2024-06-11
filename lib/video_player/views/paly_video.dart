@@ -14,7 +14,7 @@ class _PalyVideoState extends State<PalyVideo> {
   late Future<void> _initializeVideoPlayerFuture;
   @override
   void initState() {
-    // TODO: implement initState
+     
     super.initState();
     _controller =
         VideoPlayerController.networkUrl(Uri.parse(widget.videoUrl ?? ""));
@@ -28,7 +28,7 @@ class _PalyVideoState extends State<PalyVideo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Video Player"),
+        title:const Text("Video Player"),
       ),
       body: FutureBuilder(
         future: _initializeVideoPlayerFuture,

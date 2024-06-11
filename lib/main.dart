@@ -1,6 +1,8 @@
 // import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tap/search_functionility/cubit/cubit/player_search_cubit.dart';
+import 'package:tap/search_functionility/view/PlayerDisplay.dart';
 // import 'package:tap/animation/animaterCard.dart';
 // import 'package:tap/animation/animation_class.dart';
 // import 'package:tap/animation/bouncing_ball.dart';
@@ -79,12 +81,17 @@ class MyApp extends StatelessWidget {
       //     child: const UserDetailUi(),
       //   ),
       // ),
-      home: RepositoryProvider(
-        create: (context) => VideoRepository(Videoprovider()),
-        child: BlocProvider(
-          create: (context) => VideoBloc(context.read<VideoRepository>()),
-          child: const VideoPalyer(),
-        ),
+      // home: RepositoryProvider(
+      //   create: (context) => VideoRepository(Videoprovider()),
+      //   child: BlocProvider(
+      //     create: (context) => VideoBloc(context.read<VideoRepository>()),
+      //     child: const VideoPalyer(),
+      //   ),
+      // ),
+      // cubit
+      home: BlocProvider<PlayerSearchCubit>(
+        create: (_) => PlayerSearchCubit(),
+        child: const Playerdisplay(),
       ),
       // home: AnimatedHeart(),
       debugShowCheckedModeBanner: false,
