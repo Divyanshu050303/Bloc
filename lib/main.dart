@@ -11,10 +11,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:tap/animation/heartBreak.dart';
 // import 'package:tap/animation/rotateImage.dart';
 // import 'package:tap/animation/walkingContainer.dart';
-import 'package:tap/photo/bloc/photo_bloc.dart';
-import 'package:tap/photo/provider/PhotoProvider.dart';
-import 'package:tap/photo/repository/photoRepository.dart';
-import 'package:tap/photo/view/photoDisplay.dart';
+// import 'package:tap/photo/bloc/photo_bloc.dart';
+// import 'package:tap/photo/provider/PhotoProvider.dart';
+// import 'package:tap/photo/repository/photoRepository.dart';
+// import 'package:tap/photo/view/photoDisplay.dart';
+import 'package:tap/video_player/bloc/video_bloc.dart';
+import 'package:tap/video_player/provider/VideoProvider.dart';
+import 'package:tap/video_player/repository/video_repository.dart';
+import 'package:tap/video_player/views/video_palyer.dart';
 // import 'package:tap/animation/rotate.dart';
 
 // import 'package:tap/infinite_list_app/simple_bloc_observer.dart';
@@ -76,10 +80,10 @@ class MyApp extends StatelessWidget {
       //   ),
       // ),
       home: RepositoryProvider(
-        create: (context) => PhotoRepository(Photoprovider()),
+        create: (context) => VideoRepository(Videoprovider()),
         child: BlocProvider(
-          create: (context) => PhotoBloc(context.read<PhotoRepository>()),
-          child: const Photodisplay(),
+          create: (context) => VideoBloc(context.read<VideoRepository>()),
+          child: const VideoPalyer(),
         ),
       ),
       // home: AnimatedHeart(),
