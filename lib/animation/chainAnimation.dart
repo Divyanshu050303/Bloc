@@ -52,7 +52,7 @@ class _AnimatedHeartState extends State<AnimatedHeart>
     ]).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: Interval(0.5, 1.0, curve: Curves.easeInOut),
+        curve: const Interval(0.5, 1.0, curve: Curves.easeInOut),
       ),
     );
 
@@ -81,7 +81,7 @@ class _AnimatedHeartState extends State<AnimatedHeart>
               offset: Offset(0, _bounceAnimation.value),
               child: Transform.rotate(
                 angle: _rotationAnimation.value,
-                child: Icon(
+                child: const Icon(
                   Icons.favorite,
                   color: Colors.red,
                   size: 100,
