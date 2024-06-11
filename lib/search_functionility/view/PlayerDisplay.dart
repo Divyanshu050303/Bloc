@@ -33,7 +33,7 @@ class Playerdisplay extends StatelessWidget {
                 } else if (state is PlayerSearchFilteredState) {
                   return buildPlayerList(palyerlist: state.filterdPlayers);
                 } else {
-                  return Container();
+                  return const Center(child: Text("Data Not Found!!."));
                 }
               },
             ))
