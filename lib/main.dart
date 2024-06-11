@@ -1,7 +1,12 @@
 // import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:tap/animation/animaterCard.dart';
 // import 'package:tap/animation/animation_class.dart';
 import 'package:tap/animation/bouncing_ball.dart';
+import 'package:tap/animation/fadedEffect.dart';
+import 'package:tap/animation/heartBeat.dart';
+import 'package:tap/animation/rotateImage.dart';
+import 'package:tap/animation/walkingContainer.dart';
 // import 'package:tap/animation/rotate.dart';
 
 // import 'package:tap/infinite_list_app/simple_bloc_observer.dart';
@@ -62,7 +67,7 @@ class MyApp extends StatelessWidget {
       //     child: const UserDetailUi(),
       //   ),
       // ),
-      home: BouncingBall(),
+      home: FadedEffect(),
       debugShowCheckedModeBanner: false,
     );
   }

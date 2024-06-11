@@ -10,14 +10,19 @@ class RotateAnimatedState extends StatefulWidget {
 class __RotateAnimatedStateState extends State<RotateAnimatedState>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+  late Animation<double> animationController;
   @override
   void initState() {
+    super.initState();
     // TODO: implement initState
 
     _controller =
         AnimationController(vsync: this, duration: Duration(milliseconds: 300))
           ..forward()
           ..repeat();
+    animationController = Tween<double>(begin: 0, end: 0.5).animate(
+      _controller,
+    );
   }
 
   @override
