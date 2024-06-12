@@ -1,10 +1,12 @@
 // import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tap/hive_store/hive_store_ui.dart';
 // import 'package:tap/search_functionility/cubit/cubit/player_search_cubit.dart';
 // import 'package:tap/search_functionility/view/PlayerDisplay.dart';
-import 'package:tap/video_payer_using_cubit/cubit/video_player_cubit.dart';
-import 'package:tap/video_payer_using_cubit/view/video_palyer.dart';
+// import 'package:tap/video_payer_using_cubit/cubit/video_player_cubit.dart';
+// import 'package:tap/video_payer_using_cubit/view/video_palyer.dart';
 // import 'package:tap/video_player/views/video_palyer.dart';
 // import 'package:tap/animation/animaterCard.dart';
 // import 'package:tap/animation/animation_class.dart';
@@ -41,6 +43,13 @@ void main() async {
   // print(sum); // 45
   // Bloc.observer = const CounterObserver();
   // Bloc.observer = SimpleBlocObserver();
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // To intialise the hive database
+  await Hive.initFlutter();
+
+  // To open the user hive box
+  await Hive.openBox("userHiveBox");
   runApp(const MyApp());
 }
 
@@ -62,7 +71,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       // home: MultiBlocProvider(
       //   providers: [
       //     BlocProvider<CounterBloc>(
@@ -96,11 +105,12 @@ class MyApp extends StatelessWidget {
       //   create: (_) => PlayerSearchCubit(),
       //   child: const Playerdisplay(),
       // ),
-      home: BlocProvider<VideoPlayerCubit>(
-        create: (_) => VideoPlayerCubit(),
-        child: VideoPalyerCubit(),
-      ),
+      // home: BlocProvider<VideoPlayerCubit>(
+      //   create: (_) => VideoPlayerCubit(),
+      //   child: VideoPalyerCubit(),
+      // ),
       // home: AnimatedHeart(),
+      home: HiveStoreUi(),
       debugShowCheckedModeBanner: false,
     );
   }
