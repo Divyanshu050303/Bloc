@@ -10,7 +10,7 @@ class Playerdisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Player"),
+        title: const Text("Search Player"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

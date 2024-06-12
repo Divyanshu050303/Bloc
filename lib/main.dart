@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:tap/search_functionility/view/PlayerDisplay.dart';
 import 'package:tap/video_payer_using_cubit/cubit/video_player_cubit.dart';
 import 'package:tap/video_payer_using_cubit/view/video_palyer.dart';
-import 'package:tap/video_player/views/video_palyer.dart';
+// import 'package:tap/video_player/views/video_palyer.dart';
 // import 'package:tap/animation/animaterCard.dart';
 // import 'package:tap/animation/animation_class.dart';
 // import 'package:tap/animation/bouncing_ball.dart';
