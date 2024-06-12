@@ -33,6 +33,7 @@ class PortfolioBalance extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               PortfolioBalanceButton(
+                isSend: true,
                 icon: Icons.send,
                 title: "Send",
                 isTilted: true,

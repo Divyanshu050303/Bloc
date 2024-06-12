@@ -5,8 +5,14 @@ class PortfolioBalanceButton extends StatelessWidget {
   final IconData? icon;
   final Function()? onpressed;
   final bool? isTilted;
+  final bool? isSend;
   const PortfolioBalanceButton(
-      {super.key, this.title, this.icon, this.onpressed, this.isTilted});
+      {super.key,
+      this.title,
+      this.icon,
+      this.onpressed,
+      this.isTilted,
+      this.isSend});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +33,8 @@ class PortfolioBalanceButton extends StatelessWidget {
           child: Center(
               child: isTilted ?? false
                   ? Transform.rotate(
-                      angle: 45 * 3.14 / 180,
+                      angle:
+                          isSend ?? false ? -45 * 3.14 / 180 : 45 * 3.14 / 180,
                       child: Icon(
                         icon,
                         color: Colors.white,
