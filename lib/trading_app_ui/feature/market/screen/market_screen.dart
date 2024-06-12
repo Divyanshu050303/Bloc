@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tap/trading_app_ui/common/constant.dart';
+import 'package:tap/trading_app_ui/common/search.dart';
 import 'package:tap/trading_app_ui/feature/market/widget/company_iop_graph.dart';
 
 class MarketScreen extends StatelessWidget {
@@ -10,6 +11,7 @@ class MarketScreen extends StatelessWidget {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     return Scaffold(
       body: SizedBox(
+          child: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(
@@ -19,20 +21,7 @@ class MarketScreen extends StatelessWidget {
               "Market",
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
             ),
-            Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Find Stoks, Bonds, Assets",
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20),
-                      borderSide:
-                          const BorderSide(color: Colors.black, width: 2),
-                    ),
-                    prefixIcon: const Icon(Icons.search),
-                  ),
-                )),
+            const CustomSearchBar(hintText: "Find Stoks, Bonds, Assets"),
             SizedBox(
               width: mediaQueryData.size.width,
               height: mediaQueryData.size.height * 0.7,
@@ -54,7 +43,7 @@ class MarketScreen extends StatelessWidget {
             )
           ],
         ),
-      ),
+      )),
     );
   }
 }
