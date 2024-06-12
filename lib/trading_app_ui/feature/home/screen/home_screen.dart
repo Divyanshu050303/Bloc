@@ -49,88 +49,90 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const PortfolioBalance(),
-            Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: TextField(
-                  decoration: InputDecoration(
-                      hintText: "Find Stoks, Bonds, Assets",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
-                        borderSide:
-                            const BorderSide(color: Colors.black, width: 2),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const PortfolioBalance(),
+              Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Find Stoks, Bonds, Assets",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide:
+                              const BorderSide(color: Colors.black, width: 2),
+                        ),
+                        prefixIcon: const Icon(Icons.search),
+                        suffixIcon: Container(
+                          margin: const EdgeInsets.only(right: 10),
+                          width: 24,
+                          height: 24,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.greenAccent.shade100),
+                          child: const Icon(Icons.filter_center_focus),
+                        )),
+                  )),
+              const SizedBox(
+                height: 30,
+              ),
+              Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width * 0.05,
+                      vertical: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        "Favourites",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.w600),
                       ),
-                      prefixIcon: const Icon(Icons.search),
-                      suffixIcon: Container(
-                        margin: const EdgeInsets.only(right: 10),
-                        width: 24,
-                        height: 24,
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        width: 100,
+                        height: 40,
                         decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.greenAccent.shade100),
-                        child: const Icon(Icons.filter_center_focus),
-                      )),
-                )),
-            const SizedBox(
-              height: 30,
-            ),
-            Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width * 0.05,
-                    vertical: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Favourites",
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      width: 100,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(25)),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Today",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Icon(
-                            Icons.keyboard_arrow_down,
-                            color: Colors.white,
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.15,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: companyList.length,
-                  itemBuilder: (context, index) {
-                    return CompanyIpo(
-                      companyName: companyList[index]["compnayName"],
-                      price: companyList[index]["price"],
-                      increment: companyList[index]["imcrement"],
-                      icon: companyList[index]["icon"],
-                    );
-                  }),
-            )
-          ],
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(25)),
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Today",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            Icon(
+                              Icons.keyboard_arrow_down,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  )),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * 0.15,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: companyList.length,
+                    itemBuilder: (context, index) {
+                      return CompanyIpo(
+                        companyName: companyList[index]["compnayName"],
+                        price: companyList[index]["price"],
+                        increment: companyList[index]["imcrement"],
+                        icon: companyList[index]["icon"],
+                      );
+                    }),
+              )
+            ],
+          ),
         ),
       ),
     );
