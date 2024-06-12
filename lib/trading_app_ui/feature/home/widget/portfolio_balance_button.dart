@@ -13,7 +13,10 @@ class PortfolioBalanceButton extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 20, bottom: 20, right: 32.5),
+          margin: const EdgeInsets.only(
+            top: 20,
+            bottom: 20,
+          ),
           width: 65,
           height: 65,
           decoration: BoxDecoration(

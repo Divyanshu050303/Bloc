@@ -16,7 +16,7 @@ class PortfolioBalance extends StatelessWidget {
       height: mediaQueryData.size.height * 0.35,
       decoration: BoxDecoration(
           color: Colors.black.withOpacity(1),
-          borderRadius: BorderRadius.circular(25)),
+          borderRadius: BorderRadius.circular(50)),
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,6 +30,7 @@ class PortfolioBalance extends StatelessWidget {
                 color: Colors.white, fontSize: 40, fontWeight: FontWeight.w600),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               PortfolioBalanceButton(
                 icon: Icons.send,
