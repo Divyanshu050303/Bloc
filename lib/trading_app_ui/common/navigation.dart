@@ -8,7 +8,7 @@ import 'package:tap/trading_app_ui/feature/person/screen/person_screen.dart';
 
 class BottomBar extends StatefulWidget {
   static const String routeName = '/actual-home';
-  const BottomBar({Key? key}) : super(key: key);
+  const BottomBar({super.key});
 
   @override
   State<BottomBar> createState() => _BottomBarState();
