@@ -12,14 +12,14 @@ class NotificationScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
-          Text(
+          const Text(
             "Notification",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
           ),
-          CustomSearchBar(
+          const CustomSearchBar(
             hintText: "Search Notification",
           ),
           SizedBox(

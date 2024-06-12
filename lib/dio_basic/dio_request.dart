@@ -112,7 +112,9 @@ class Api {
       if (response.statusCode == 200) {
         log("fetched ");
       }
-    } catch (e) {}
+    } catch (e) {
+      log(e.toString());
+    }
     // using interceptors
     dio.interceptors
         .add(InterceptorsWrapper(onError: (DioException e, handler) {
