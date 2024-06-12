@@ -4,6 +4,7 @@ import 'package:tap/trading_app_ui/common/constant.dart';
 import 'package:tap/trading_app_ui/feature/home/screen/home_screen.dart';
 import 'package:tap/trading_app_ui/feature/market/screen/market_screen.dart';
 import 'package:tap/trading_app_ui/feature/notification/screen/notification_screen.dart';
+import 'package:tap/trading_app_ui/feature/person/screen/person_screen.dart';
 
 class BottomBar extends StatefulWidget {
   static const String routeName = '/actual-home';
@@ -22,7 +23,7 @@ class _BottomBarState extends State<BottomBar> {
     const HomePage(),
     const NotificationScreen(),
     const MarketScreen(),
-    Container()
+    const PersonScreen()
   ];
 
   void updatePage(int page) {

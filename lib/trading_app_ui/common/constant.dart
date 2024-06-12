@@ -63,4 +63,38 @@ class Constant {
   static const Color greyBackgroundCOlor = Color(0xffebecee);
   static var selectedNavBarColor = Colors.cyan[800]!;
   static const unselectedNavBarColor = Colors.black87;
+  static List<Map<String, dynamic>> settingOption = [
+    {"icon": Icons.person_outline, "title": "Profile", "onPressed": () {}},
+    {
+      "icon": Icons.account_circle_outlined,
+      "title": "Account Setting",
+      "onPressed": () {}
+    },
+    {
+      "icon": Icons.analytics_outlined,
+      "title": "Trading Preferences",
+      "onPressed": () {}
+    },
+    {
+      "icon": Icons.security_outlined,
+      "title": "Security Settings",
+      "onPressed": () {}
+    },
+    {
+      "icon": Icons.privacy_tip_outlined,
+      "title": "Privacy Settings",
+      "onPressed": () {}
+    },
+    {
+      "icon": Icons.dark_mode_outlined,
+      "title": "Theme and Appearance",
+      "onPressed": () {}
+    },
+    {
+      "icon": Icons.support_agent_outlined,
+      "title": "Help and Support",
+      "onPressed": () {}
+    },
+    {"icon": Icons.info_outline, "title": "About", "onPressed": () {}},
+  ];
 }

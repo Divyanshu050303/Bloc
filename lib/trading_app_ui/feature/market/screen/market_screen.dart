@@ -19,7 +19,7 @@ class MarketScreen extends StatelessWidget {
             ),
             const Text(
               "Market",
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
             ),
             const CustomSearchBar(hintText: "Find Stoks, Bonds, Assets"),
             SizedBox(

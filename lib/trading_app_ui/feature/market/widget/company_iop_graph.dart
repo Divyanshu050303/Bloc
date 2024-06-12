@@ -38,7 +38,7 @@ class CompanyIopGraph extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
-                width: 70,
+                width: 65,
                 height: 40,
                 child: Sparkline(
                   data: data,
@@ -51,7 +51,7 @@ class CompanyIopGraph extends StatelessWidget {
                   Text(
                     price ?? "",
                     style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.w600),
+                        fontSize: 17, fontWeight: FontWeight.w600),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
