@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tap/hive_store/hive_store_ui.dart';
+import 'package:tap/trading_chart/trading_chat.dart';
 // import 'package:tap/search_functionility/cubit/cubit/player_search_cubit.dart';
 // import 'package:tap/search_functionility/view/PlayerDisplay.dart';
 // import 'package:tap/video_payer_using_cubit/cubit/video_player_cubit.dart';
@@ -110,7 +111,7 @@ class MyApp extends StatelessWidget {
       //   child: VideoPalyerCubit(),
       // ),
       // home: AnimatedHeart(),
-      home: HiveStoreUi(),
+      home: ExempleTradingChart(),
       debugShowCheckedModeBanner: false,
     );
   }
