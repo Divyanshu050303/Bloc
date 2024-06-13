@@ -1,9 +1,13 @@
 // import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:tap/fitness_app_ui/common/bottom_bar.dart';
+// import 'package:tap/fitness_app_ui/common/bottom_bar.dart';
+import 'package:tap/trading_app_ui/common/navigation.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:tap/hive_store/hive_store_ui.dart';
-import 'package:tap/trading_app_ui/common/navigation.dart';
+// import 'package:tap/trading_app_ui/common/navigation.dart';
 // import 'package:tap/trading_app_ui/feature/home/screen/home_screen.dart';
 // import 'package:tap/trading_app_ui/feature/market/screen/market_screen.dart';
 // import 'package:tap/trading_chart/trading_chat.dart';
@@ -54,6 +58,11 @@ void main() async {
 
   // To open the user hive box
   await Hive.openBox("userHiveBox");
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: Colors.transparent));
   runApp(const MyApp());
 }
 
@@ -75,7 +84,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       // home: MultiBlocProvider(
       //   providers: [
       //     BlocProvider<CounterBloc>(
@@ -114,7 +123,8 @@ class MyApp extends StatelessWidget {
       //   child: VideoPalyerCubit(),
       // ),
       // home: AnimatedHeart(),
-      home: BottomBar(),
+      home: const FitnessBottomBar(),
+      theme: ThemeData(primaryColor: Colors.cyan.shade100),
       debugShowCheckedModeBanner: false,
     );
   }
