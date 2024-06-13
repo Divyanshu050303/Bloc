@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tap/fitness_app_ui/feature/analyst/screen/statistics.dart';
 import 'package:tap/fitness_app_ui/feature/home/screen/home_screen.dart';
+import 'package:tap/fitness_app_ui/feature/notification/screen/notification_screen.dart';
 
 import 'package:tap/trading_app_ui/common/constant.dart';
 
@@ -21,7 +22,7 @@ class _FitnessBottomBarState extends State<FitnessBottomBar> {
     const FitnessHomeScreen(),
     Container(),
     const Statistics(),
-    Container(),
+    const NotificationScreen(),
   ];
 
   void updatePage(int page) {
