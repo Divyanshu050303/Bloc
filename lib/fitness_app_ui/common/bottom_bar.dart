@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tap/fitness_app_ui/feature/analyst/screen/statistics.dart';
 import 'package:tap/fitness_app_ui/feature/home/screen/home_screen.dart';
 
 import 'package:tap/trading_app_ui/common/constant.dart';
@@ -19,7 +20,7 @@ class _FitnessBottomBarState extends State<FitnessBottomBar> {
   List<Widget> pages = [
     const FitnessHomeScreen(),
     Container(),
-    Container(),
+    const Statistics(),
     Container(),
   ];
 
@@ -77,7 +78,7 @@ class _FitnessBottomBarState extends State<FitnessBottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.notifications_outlined,
+                Icons.calendar_month_outlined,
               ),
             ),
             label: '',
@@ -118,7 +119,7 @@ class _FitnessBottomBarState extends State<FitnessBottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.person_outline,
+                Icons.notifications_outlined,
               ),
             ),
             label: '',
